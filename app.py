@@ -1,3 +1,54 @@
+from os import path, listdir
+import streamlit as st
+from streamlit_embedcode import github_gist
+import streamlit.components.v1 as com
+import numpy as np
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import linear_kernel
+import pdfplumber
+import streamlit as st
+import pandas as pd
+import numpy as np
+import re
+import string
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.corpus import stopwords 
+from string import punctuation
+from nltk.corpus import wordnet as wn
+from nltk.stem import WordNetLemmatizer
+from nltk.probability import FreqDist
+from nltk.collocations import *
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction import text
+from sklearn.neighbors import NearestNeighbors
+from sklearn.preprocessing import MinMaxScaler
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+from streamlit_option_menu import option_menu
+from os import path, listdir
+import glob
+import pickle
+from pathlib import Path
+from plotly import graph_objs as go
+from collections import Counter
+from sklearn.metrics.pairwise import linear_kernel
+from st_material_table import st_material_table
+import streamlit as st
+import pandas as pd
+import pickle
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+import streamlit.components.v1 as components
+
 # page title
             st.title('Prediction Penyakit Jantung')
             col1, col2, col3 = st.columns(3)
